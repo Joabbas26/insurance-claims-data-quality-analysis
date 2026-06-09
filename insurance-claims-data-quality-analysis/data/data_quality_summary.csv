@@ -1,0 +1,10 @@
+issue,records,pct_of_raw_records
+Negative Claim Amount,83,8.07
+Duplicate Claim ID,56,5.45
+Invalid Policy Bind Date,41,3.99
+Missing Policy Number,36,3.5
+Invalid Incident Date,32,3.11
+Invalid Age,25,2.43
+Claim Total Mismatch,25,2.43
+Missing Claim ID,24,2.33
+Invalid Incident Hour,20,1.95

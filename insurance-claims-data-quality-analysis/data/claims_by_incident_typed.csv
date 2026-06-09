@@ -1,0 +1,6 @@
+incident_type,claim_count,total_claim_amount,avg_claim_amount,fraud_claim_count,fraud_rate_pct
+Single Vehicle Collision,398,25618780.0,64530.93,116,29.15
+Multi-vehicle Collision,406,24970910.0,61809.18,111,27.34
+Other / Unknown,21,992780.0,47275.24,4,19.05
+Vehicle Theft,93,511250.0,5497.31,8,8.6
+Parked Car,82,433380.0,5285.12,8,9.76
