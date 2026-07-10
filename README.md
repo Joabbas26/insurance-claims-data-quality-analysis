@@ -118,11 +118,11 @@ This page shows:
 
 ### Claims Overview Dashboard
 
-![Claims Overview Dashboard](screenshots/powerbi_claims_overview.png)
+![Claims Overview Dashboard](insurance-claims-data-quality-analysis/screenshots/powerbi_claims_overview.png)
 
 ### Data Quality Audit Dashboard
 
-![Data Quality Audit Dashboard](screenshots/powerbi_data_quality_audit.png)
+![Data Quality Audit Dashboard](insurance-claims-data-quality-analysis/screenshots/powerbi_data_quality_audit.png)
 
 ## Repository Structure
 
