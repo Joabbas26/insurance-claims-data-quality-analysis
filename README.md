@@ -1,5 +1,9 @@
 # Insurance Claims Data Cleaning and Data Quality Analysis
 
+**Summary:** Cleaned 1,028 raw insurance claim records (40 columns) into a 1,000-record reporting table, identified and flagged 9 types of data quality issues, and built Excel and Power BI reports showing a 24.70% fraud rate across $52.5M in claims.
+
+**Tools:** SQL (SQLite), Excel, Power BI (Power Query, DAX)
+
 ## Project Overview
 
 This project focuses on cleaning and analyzing a messy insurance claims dataset. The goal was to take raw claims data with missing values, duplicate records, inconsistent formatting, invalid dates, negative claim amounts, and other quality issues, then turn it into a clean dataset that could be used for reporting and business analysis.
@@ -77,6 +81,8 @@ Using SQL in DB Browser for SQLite, I performed the following cleaning steps:
 | Fraud Claim Count    |         247 |
 | Fraud Rate           |      24.70% |
 
+*Note: The average claim amount is calculated over the 997 claims that have a recorded claim amount.*
+
 ## Key Insights
 
 1. Collision-related claims made up the largest share of total claim costs, especially single vehicle and multi-vehicle collisions.
@@ -86,6 +92,15 @@ Using SQL in DB Browser for SQLite, I performed the following cleaning steps:
 3. NY had the highest total claim amount, while OH had the highest fraud rate, even though OH had fewer total claims than larger states.
 
 4. The data quality audit showed that the raw dataset needed cleaning before it could be trusted for reporting or dashboard use.
+
+The supporting summary tables are in the `data/` folder (`claims_by_incident_type.csv`, `claims_by_state.csv`, `data_quality_summary.csv`), and the queries are in `sql/project1_insurance_claims_analysis_queries.sql`.
+
+## How to Run
+
+1. Open `sql/project1_insurance_claims_sqlite_cleaning.sql` in DB Browser for SQLite (import `data/insurance_claims_messy.csv` first) and run it to build the cleaned tables.
+2. Run `sql/project1_insurance_claims_analysis_queries.sql` to reproduce the summary metrics and tables.
+3. Open `excel/Project1_Insurance_Claims_Excel_Summary.xlsx` for the Excel summary.
+4. Open `powerbi/Insurance_Claims_Dashboard.pbix` in Power BI Desktop to view the dashboard.
 
 ## Power BI Dashboard
 
@@ -118,15 +133,19 @@ This page shows:
 
 ### Claims Overview Dashboard
 
-![Claims Overview Dashboard](insurance-claims-data-quality-analysis/screenshots/powerbi_claims_overview.png)
+![Claims Overview Dashboard](screenshots/powerbi_claims_overview.png)
 
 ### Data Quality Audit Dashboard
 
-![Data Quality Audit Dashboard](insurance-claims-data-quality-analysis/screenshots/powerbi_data_quality_audit.png)
+![Data Quality Audit Dashboard](screenshots/powerbi_data_quality_audit.png)
+
+### Excel Summary Dashboard
+
+![Excel Summary Dashboard](screenshots/excel_dashboard.png)
 
 ## Repository Structure
 
-```text
+```
 insurance-claims-data-quality-analysis
 │
 ├── data
@@ -161,6 +180,6 @@ insurance-claims-data-quality-analysis
 
 This project helped me practice cleaning messy data, creating data quality checks, writing SQL queries, building Excel summaries, and creating Power BI dashboards. I also learned how important it is to validate raw data before using it for analysis or business reporting.
 
-## How This Project Applies to Real Analyst Work
+## How This Applies to Analyst Work
 
 In a real company, analysts often receive messy data from different systems. Before creating reports or dashboards, the data needs to be checked, cleaned, standardized, and validated. This project shows that I can take raw business data, identify problems, clean it, analyze it, and present the results in a clear way.
